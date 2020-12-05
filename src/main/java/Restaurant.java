@@ -45,7 +45,12 @@ public class Restaurant {
     }
 
     public int getOrderValue(String... orderItems) throws itemNotFoundException {
-        Integer orderCost = 0;
+        int orderCost = 0;
+        for (String item : orderItems) {
+            Item itemDetails = findItemByName(item);
+            if (itemDetails == null) throw new itemNotFoundException(item);
+            orderCost += itemDetails.getPrice();
+        }
         return orderCost;
     }
 }

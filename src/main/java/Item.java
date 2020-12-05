@@ -10,4 +10,8 @@ public class Item {
     public String getName() {
         return name;
     }
+
+    public Integer getPrice() {
+        return price;
+    }
 }
