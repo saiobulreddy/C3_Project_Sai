@@ -60,4 +60,17 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class, () -> restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<ORDER VALE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void order_value_should_be_addition_of_all_item_values_in_the_order() throws itemNotFoundException {
+        int orderValue = restaurant.getOrderValue("Sweet corn soup", "Vegetable lasagne");
+        assertEquals(119 + 269, orderValue);
+    }
+
+    @Test
+    public void ordering_item_that_does_not_exist_should_throw_exception() {
+        assertThrows(itemNotFoundException.class, () -> restaurant.getOrderValue("French fries"));
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<ORDER VALE>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

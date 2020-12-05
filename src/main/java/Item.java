@@ -1,6 +1,6 @@
 public class Item {
-    private String name;
-    private int price;
+    final String name;
+    final int price;
 
     public Item(String name, int price) {
         this.name = name;
@@ -9,12 +9,5 @@ public class Item {
 
     public String getName() {
         return name;
-    }
-    @Override
-    public String toString(){
-        return  name + ":"
-                + price
-                + "\n"
-                ;
     }
 }
