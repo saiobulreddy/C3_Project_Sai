@@ -20,9 +20,13 @@ public class Restaurant {
         return openingTime.isBefore(getCurrentTime()) && closingTime.isAfter(getCurrentTime());
     }
 
-    public LocalTime getCurrentTime() { return LocalTime.now(); }
+    public LocalTime getCurrentTime() {
+        return LocalTime.now();
+    }
 
-    public List<Item> getMenu() { return menu; }
+    public List<Item> getMenu() {
+        return menu;
+    }
 
     private Item findItemByName(String itemName) {
         for (Item item : menu) if (item.getName().equals(itemName)) return item;
