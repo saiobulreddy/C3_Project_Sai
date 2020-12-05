@@ -1,2 +1,5 @@
-# C3_Project_Sai
-upGrad's Restaurant Finder assignment project
+# README # 
+
+while setting up the project 
+* use JDK-11.0.8
+* import all the dependencies.
